@@ -66,8 +66,17 @@ temperature = double.Parse("21"); // konwersja typu z tekstu na liczbę
 // ## Wartości nullable (wartość pusta, nieokreślona)
 
 double? currentTemperature = null;
-DateTime? stopDate = null;
+Nullable<DateTime> stopDate = null;
 string? secondName = null;
+
+
+// var - silnie typowanie - typ jest wnioskowany na podstawie przypisanej wartości
+var area = "sector C";
+
+var weight = 100;
+
+var person = new { FirstName = "John", LastName = "Smith" };
+
 
 
 
