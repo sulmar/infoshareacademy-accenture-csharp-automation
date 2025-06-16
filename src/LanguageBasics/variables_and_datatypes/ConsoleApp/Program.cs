@@ -70,13 +70,17 @@ Nullable<DateTime> stopDate = null;
 string? secondName = null;
 
 
-// var - silnie typowanie - typ jest wnioskowany na podstawie przypisanej wartości
+// ## var - silnie typowanie - typ jest wnioskowany na podstawie przypisanej wartości
 var area = "sector C";
 
 var weight = 100;
 
 var person = new { FirstName = "John", LastName = "Smith" };
 
+// Stałe (constants)
+const float PI = 3.14f;
+
+const int speedOfLight = 300_000;
 
 
 
