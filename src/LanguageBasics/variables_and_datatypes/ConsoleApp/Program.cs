@@ -1,4 +1,6 @@
 ﻿
+// # Zmienne
+
 // Utworzenie zmiennej typu tekst
 string name = "Marcin";
 string Name = "John"; // w C# wielkość liter ma znaczenie!
@@ -38,6 +40,7 @@ DateTime timestamp = DateTime.Now;
 // Typ interwał czasu
 TimeSpan duration = TimeSpan.FromSeconds(30);
 
+// ## Rzutowania (konwersja typów)
 
 counter = (int) latitude; // ucina część ułamkową
 
@@ -58,6 +61,13 @@ counter = dailyCounter; // niejawne rzutowanie
 dailyCounter = (byte) counter;  // jawne rzutowane (casting) 
 
 temperature = double.Parse("21"); // konwersja typu z tekstu na liczbę
+
+
+// ## Wartości nullable (wartość pusta, nieokreślona)
+
+double? currentTemperature = null;
+DateTime? stopDate = null;
+string? secondName = null;
 
 
 
