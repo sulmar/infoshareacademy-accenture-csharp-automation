@@ -45,14 +45,14 @@ TimeSpan duration = TimeSpan.FromSeconds(30);
 counter = (int) latitude; // ucina część ułamkową
 
 // Sprawdzanie przepełnienia (przekroczenia limitu danego typu)
-checked
-{
-    dailyCounter++;
+//checked
+//{
+//    dailyCounter++;
 
-    dailyCounter++;
+//    dailyCounter++;
 
-    dailyCounter++;
-}
+//    dailyCounter++;
+//}
 
 Console.WriteLine(dailyCounter);
 
@@ -80,10 +80,13 @@ var person = new { FirstName = "John", LastName = "Smith" };
 // Stałe (constants)
 const float PI = 3.14f;
 
-const int speedOfLight = 300_000;
+const int speedOfLight = 300_000; // Liczby mogą być odseparowane za pomocą podkreślenia (nie zmienia wartości)
 
 
+// Przypisanie konretnej daty
+DateTime startMeasure = DateTime.Parse("2025-06-16 23:00");
 
+Console.WriteLine(startMeasure);
 
 
 
