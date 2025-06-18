@@ -45,4 +45,8 @@ Current RPM: 1000
 [2025-06-18 12:43:12] Machine: Tokarka-9 | Status: IsRunning | RPM: 1000 | 
 ```
 
+## Dla chętnych
+- Zatrzymaj tokarkę automatycznie jeśli jest przeciążona - RPM powyżej `2500`
+
+
 ## Czas: 30 min.
