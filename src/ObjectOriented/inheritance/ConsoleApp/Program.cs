@@ -2,10 +2,17 @@
 
 Compressor compressor = new OilCompressor("C-01");
 
-Valve valve1 = new Valve("V-11");
-Valve valve2 = new Valve("V-22");
+// Tworzymy zawory
+InputValve valve1 = new InputValve("V-11");
+InputValve valve2 = new InputValve("V-12");
+OutputValve valve3 = new OutputValve("V-22");
 
-Mixer mixer = new Mixer("M-03", Direction.Left, valve1, valve2);
+// Przekazujemy zawory poprzez konstruktor (kompozycja)
+Mixer mixer = new Mixer("M-03", Direction.Left, valve1, valve3);
+
+// Podmieniamy obiekt na inny
+mixer.ReplaceInputValve(valve2);
+
 mixer.Start(Direction.Right);
 mixer.Stop();
 

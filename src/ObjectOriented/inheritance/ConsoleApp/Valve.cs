@@ -1,4 +1,19 @@
-﻿class Valve
+﻿
+class InputValve : Valve
+{
+    public InputValve(string name) : base(name)
+    {
+    }
+}
+
+class OutputValve : Valve
+{
+    public OutputValve(string name) : base(name)
+    {
+    }
+}
+
+abstract class Valve
 {
     public string Name { get; set; }
     public bool IsOpened { get; set; }
