@@ -2,8 +2,7 @@
 Console.WriteLine("Hello, World!");
 
 // Utworzenie instancji klasy czyli utworzenie obiektu
-TemperatureSensor sensor1 = new TemperatureSensor();  // Obiekt klasy TemperatureSensor
-sensor1.SensorId = "T-01";
+TemperatureSensor sensor1 = new TemperatureSensor("T-01");  // Obiekt klasy TemperatureSensor
 sensor1.Temperature = 89.5;
 sensor1.Report();
 
@@ -18,8 +17,7 @@ sensor1.Report();
 
 sensor1.Disable();
 
-var sensor2 = new TemperatureSensor(); // Kolejny obiekt klasy TemperatureSensor
-sensor2.SensorId = "T-02";
+var sensor2 = new TemperatureSensor("T-02"); // Kolejny obiekt klasy TemperatureSensor
 sensor2.Enable();
 sensor2.Temperature = 71.5;
 
@@ -85,14 +83,16 @@ class TemperatureSensor
         else
             return null;
     }
-
+     
     */
 
 
     // Konstruktor (constructor) - metoda, która jest automatycznie uruchamiania podczas tworzenia instacji obiektu za pomocą new()
-    // służy do przypisania wartości początkowych (domyślnych)
-    public TemperatureSensor()
+    // służy do przypisania wartości początkowych (domyślnych) 
+    public TemperatureSensor(string name)
     {
+        this.SensorId = name;
+
         Console.WriteLine("Temperature sensor created.");
 
         Enable();
