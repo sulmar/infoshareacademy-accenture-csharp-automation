@@ -20,6 +20,9 @@ else
 }
 
 
+double temperature = 26;
+
+
 // Match Patterns (Wzorce dopasowania)
 string message2 = pressure switch
 {
@@ -29,7 +32,6 @@ string message2 = pressure switch
 };
 
 Console.WriteLine(message2);
-
 
 string sensorType = "z";
 
