@@ -1,51 +1,19 @@
 ﻿
-class Valve
-{
-    public string Name { get; set; }
-    public bool IsOpened { get; set; }
-    public bool CanClosed
-    {
-        get
-        {
-            return IsOpened;
-        }
-    }
-
-    public bool HasFlowMeter { get; set; }
-    public float OpeningDegree { get; set; }
-
-    public Valve(string name)
-    {
-        this.Name = name;
-    }
-
-    public void Open()
-    {
-        IsOpened = true;
-    }
-
-    public void Close()
-    {
-        if (CanClosed)
-        {
-            IsOpened = false;
-        }
-    }
-}
-
 class Mixer : Machine
 {
     public int RPM { get; set; }
 
     public Direction CurrentDirection { get; set; }
 
-    private Valve valve;  // Kompozycja
+    private Valve inputValve;  // Kompozycja
+    private Valve outputValve;
    
-    public Mixer(string name, Direction initDirection, Valve valve)
+    public Mixer(string name, Direction initDirection, Valve inputValve, Valve outputValve)
         : base(name)
     {
         this.CurrentDirection = initDirection;
-        this.valve = valve;
+        this.inputValve = inputValve;
+        this.outputValve = outputValve;
     }
 
     public void Start(Direction direction)
@@ -54,16 +22,18 @@ class Mixer : Machine
 
         this.CurrentDirection = direction;
 
-        valve.Open();
+        inputValve.Open();
+        outputValve.Close();
 
         Console.WriteLine($"Running Mixer {direction}");
     }
 
     public override void Stop()
     {
-        if (valve.CanClosed)
+        if (inputValve.CanClosed)
         {
-            valve.Close();
+            inputValve.Close();
+            outputValve.Open();
 
             base.Stop();
         }

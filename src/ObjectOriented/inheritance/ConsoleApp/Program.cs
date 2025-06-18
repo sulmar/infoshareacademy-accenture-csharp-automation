@@ -2,9 +2,10 @@
 
 Compressor compressor = new OilCompressor("C-01");
 
-Valve valve = new Valve("V-11");
+Valve valve1 = new Valve("V-11");
+Valve valve2 = new Valve("V-22");
 
-Mixer mixer = new Mixer("M-03", Direction.Left, valve);
+Mixer mixer = new Mixer("M-03", Direction.Left, valve1, valve2);
 mixer.Start(Direction.Right);
 mixer.Stop();
 
