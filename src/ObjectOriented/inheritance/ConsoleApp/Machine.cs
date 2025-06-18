@@ -1,5 +1,5 @@
 ﻿// Klasowa bazowa
-abstract class Machine
+abstract class Machine 
 {
     public string Name { get; set; }
 
