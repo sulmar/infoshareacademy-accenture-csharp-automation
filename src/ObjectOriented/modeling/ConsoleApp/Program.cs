@@ -42,6 +42,9 @@ class TemperatureSensor
     private bool isActive;
 
 
+    private DateTime startedAt;
+
+
     private double? temperature;  // Pole prywatne (Private Field) - back field 
     public double? Temperature // Właściwość (Property)
     {
@@ -84,6 +87,18 @@ class TemperatureSensor
     }
 
     */
+
+
+    // Konstruktor (constructor) - metoda, która jest automatycznie uruchamiania podczas tworzenia instacji obiektu za pomocą new()
+    // służy do przypisania wartości początkowych (domyślnych)
+    public TemperatureSensor()
+    {
+        Console.WriteLine("Temperature sensor created.");
+
+        Enable();
+
+        startedAt = DateTime.Now;
+    }
 
     public void Enable()
     {
