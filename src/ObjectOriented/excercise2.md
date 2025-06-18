@@ -4,7 +4,7 @@
 - Włączanie/wyłączanie telefonu
 - Wyświetlanie poziomu naładowania baterii
 - Wysłanie wiadomości SMS na podany numer telefonu
-- Wysłanie wadomości SMS zużywa energię
+- Wysłanie wiadomości SMS zużywa energię
 - Automatyczne wyłączenie telefonu przy rozładowaniu baterii
 
 
