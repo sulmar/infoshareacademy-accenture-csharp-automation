@@ -10,6 +10,18 @@ Machine machine = compressor;
 machine.Start();
 machine.Stop();
 
+// Lista obiektów typu Machine
+List<Machine> productionLineA = new List<Machine>();
+productionLineA.Add(compressor);
+productionLineA.Add(mixer);
+
+foreach (Machine m in productionLineA)
+{
+    m.Start();
+}
+
+
+
 
 
 // Klasowa bazowa
@@ -26,7 +38,9 @@ machine.Stop();
         isRunning = false;
     }
 
-    public void Start()
+    // virtual - włącza mechanizm poliformizmu (wielopostaciowość)
+    // poliformizm - oznacza, że metoda, która należy wywołać jest określone w czasie działania aplikacji
+    public virtual void Start()
     {
         isRunning = true;
     }
@@ -50,7 +64,8 @@ abstract class Compressor : Machine // Dziedziczenie (inheritence)
     {
     }
 
-    public new void Start()
+    // override - przysłanianie
+    public override void Start()
     {
         base.Start();
 
@@ -112,7 +127,7 @@ class Mixer : Machine
 
         this.CurrentDirection = direction;
 
-        Console.WriteLine("Running Mixer");
+        Console.WriteLine($"Running Mixer {direction}");
     }
 }
 
