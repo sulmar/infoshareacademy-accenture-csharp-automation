@@ -3,7 +3,7 @@ Console.WriteLine("Hello, World!");
 
 // Utworzenie instancji klasy czyli utworzenie obiektu
 TemperatureSensor sensor1 = new TemperatureSensor();  // Obiekt klasy TemperatureSensor
-sensor1.sensorId = "T-01";
+sensor1.SensorId = "T-01";
 sensor1.Temperature = 89.5;
 sensor1.Report();
 
@@ -19,7 +19,7 @@ sensor1.Report();
 sensor1.Disable();
 
 var sensor2 = new TemperatureSensor(); // Kolejny obiekt klasy TemperatureSensor
-sensor2.sensorId = "T-02";
+sensor2.SensorId = "T-02";
 sensor2.Enable();
 sensor2.Temperature = 71.5;
 
@@ -37,11 +37,12 @@ double ConvertToFarenhait(double celsius)
 class TemperatureSensor
 {
     // pola (cechy)
-    public string sensorId;        // Pole publiczne (Public Field)
+    public string SensorId { get; set; } // Właściwość (Property)
+
     private bool isActive;
 
 
-    private double? temperature;  // Pole prywatne (Private Field)
+    private double? temperature;  // Pole prywatne (Private Field) - back field 
     public double? Temperature // Właściwość (Property)
     {
         set // setter (ustawiacz)
@@ -91,14 +92,14 @@ class TemperatureSensor
         // Thread.Sleep(5000);     - programowanie synchroniczne - wszystko się dzieje w 1 wątku
         // await Task.Delay(5000); - programowanie asynchroniczne - może być kilka wątków 
 
-        Console.WriteLine($"{sensorId} activated.");
+        Console.WriteLine($"{SensorId} activated.");
     }
 
     public void Disable()
     {
         isActive = false;
 
-        Console.WriteLine($"{sensorId} deactived.");
+        Console.WriteLine($"{SensorId} deactived.");
     }
 
 
@@ -106,6 +107,6 @@ class TemperatureSensor
     // Metoda
     public void Report()
     {
-        Console.WriteLine($"{sensorId} temperature: {temperature}°C active: {isActive}");
+        Console.WriteLine($"{SensorId} temperature: {temperature}°C active: {isActive}");
     }
 }
