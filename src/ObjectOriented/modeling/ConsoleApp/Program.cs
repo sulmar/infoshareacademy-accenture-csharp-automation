@@ -4,15 +4,15 @@ Console.WriteLine("Hello, World!");
 // Utworzenie instancji klasy czyli utworzenie obiektu
 TemperatureSensor sensor1 = new TemperatureSensor();  // Obiekt klasy TemperatureSensor
 sensor1.sensorId = "T-01";
-sensor1.SetTemperature(89.5);
+sensor1.Temperature = 89.5;
 sensor1.Report();
 
 
 sensor1.Enable();
 
-sensor1.SetTemperature(10);
+sensor1.Temperature = 10;
 
-double? currentTemperature = sensor1.GetTemperature();
+double? currentTemperature = sensor1.Temperature;
 
 sensor1.Report();
 
@@ -21,7 +21,7 @@ sensor1.Disable();
 var sensor2 = new TemperatureSensor(); // Kolejny obiekt klasy TemperatureSensor
 sensor2.sensorId = "T-02";
 sensor2.Enable();
-sensor2.SetTemperature(71.5);
+sensor2.Temperature = 71.5;
 
 sensor2.Report();
 
@@ -37,10 +37,33 @@ double ConvertToFarenhait(double celsius)
 class TemperatureSensor
 {
     // pola (cechy)
-    public string sensorId;
+    public string sensorId;        // Pole publiczne (Public Field)
     private bool isActive;
-    private double? temperature;   // temperature - zmienna obiektu
 
+
+    private double? temperature;  // Pole prywatne (Private Field)
+    public double? Temperature // Właściwość (Property)
+    {
+        set // setter (ustawiacz)
+        {
+            if (isActive)
+            {
+                this.temperature = value; // value - zawiera przypisaną wartość
+            }
+        }
+        get // getter (pobieracz)
+        {
+            if (isActive)
+            {
+                return this.temperature;
+            }
+            else
+                return null;
+        }
+    }
+
+
+    /*    
     public void SetTemperature(double temperature) // temperature - lokalna zmienna (parametr metody)
     {
         if (isActive)
@@ -58,6 +81,8 @@ class TemperatureSensor
         else
             return null;
     }
+
+    */
 
     public void Enable()
     {
