@@ -17,6 +17,5 @@ abstract class Compressor : Machine // Dziedziczenie (inheritence)
 
         Pressure = 100;
         Console.WriteLine("Running Compressor");
-
     }
 }
