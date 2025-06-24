@@ -1,0 +1,81 @@
+{
+  "factory": {
+    "machines": [
+      {
+        "id": "M001",
+        "name": "Tokarka CNC 500",
+        "type": "Lathe",
+        "manufacturer": {
+          "name": "DMG Mori",
+          "country": "Germany"
+        },
+        "year": 2019,
+        "specification": {
+          "power": "5.5 kW",
+          "rpm": 4000,
+          "axes": 3
+        }
+      },
+      {
+        "id": "M002",
+        "name": "Frezarka 3D VMC",
+        "type": "Milling",
+        "manufacturer": {
+          "name": "HAAS",
+          "country": "USA"
+        },
+        "year": 2021,
+        "specification": {
+          "power": "7.5 kW",
+          "rpm": 6000,
+          "axes": 4
+        }
+      },
+      {
+        "id": "M003",
+        "name": "Robot spawalniczy XR-12",
+        "type": "Welding",
+        "manufacturer": {
+          "name": "Fanuc",
+          "country": "Japan"
+        },
+        "year": 2020,
+        "specification": {
+          "power": "2.0 kW",
+          "reach": "1200 mm",
+          "axes": 6
+        }
+      },
+      {
+        "id": "M004",
+        "name": "Prasa hydrauliczna HP-100",
+        "type": "Press",
+        "manufacturer": {
+          "name": "Schuler",
+          "country": "Germany"
+        },
+        "year": 2018,
+        "specification": {
+          "force": "1000 kN",
+          "stroke": "500 mm",
+          "axes": 2
+        }
+      },
+      {
+        "id": "M005",
+        "name": "Skaner 3D ProScan",
+        "type": "Scanner",
+        "manufacturer": {
+          "name": "Zeiss",
+          "country": "Germany"
+        },
+        "year": 2022,
+        "specification": {
+          "resolution": "0.01 mm",
+          "range": "500 mm",
+          "axes": 3
+        }
+      }
+    ]
+  }
+}

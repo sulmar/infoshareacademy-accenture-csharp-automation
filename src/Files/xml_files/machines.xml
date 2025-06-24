@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<factory>
+  <machine id="M001">
+    <name>Tokarka CNC 500</name>
+    <type>Lathe</type>
+    <manufacturer>
+      <name>DMG Mori</name>
+      <country>Germany</country>
+    </manufacturer>
+    <year>2019</year>
+    <specification>
+      <power>5.5 kW</power>
+      <rpm>4000</rpm>
+      <axes>3</axes>
+    </specification>
+  </machine>
+
+  <machine id="M002">
+    <name>Frezarka 3D VMC</name>
+    <type>Milling</type>
+    <manufacturer>
+      <name>HAAS</name>
+      <country>USA</country>
+    </manufacturer>
+    <year>2021</year>
+    <specification>
+      <power>7.5 kW</power>
+      <rpm>6000</rpm>
+      <axes>4</axes>
+    </specification>
+  </machine>
+
+  <machine id="M003">
+    <name>Robot spawalniczy XR-12</name>
+    <type>Welding</type>
+    <manufacturer>
+      <name>Fanuc</name>
+      <country>Japan</country>
+    </manufacturer>
+    <year>2020</year>
+    <specification>
+      <power>2.0 kW</power>
+      <reach>1200 mm</reach>
+      <axes>6</axes>
+    </specification>
+  </machine>
+</factory>
+  <machine id="M004">
+	<name>Prasa hydrauliczna HP-100</name>
+	<type>Press</type>
+	<manufacturer>
+	  <name>Schuler</name>
+	  <country>Germany</country>
+	</manufacturer>
+	<year>2018</year>
+	<specification>
+	  <force>1000 kN</force>
+	  <stroke>500 mm</stroke>
+	  <axes>2</axes>
+	</specification>
+  </machine>
+
+  <machine id="M005">
+	<name>Skaner 3D ProScan</name>
+	<type>Scanner</type>
+	<manufacturer>
+	  <name>Zeiss</name>
+	  <country>Germany</country>
+	</manufacturer>
+	<year>2022</year>
+	<specification>
+	  <resolution>0.01 mm</resolution>
+	  <range>500 mm</range>
+	  <axes>3</axes>
+	</specification>
+  </machine>
