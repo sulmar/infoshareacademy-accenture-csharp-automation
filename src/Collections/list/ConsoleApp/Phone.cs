@@ -13,6 +13,14 @@ internal class Phone
 
     private Battery phoneBattery;
 
+    public int BatteryLevel
+    {
+        get
+        {
+            return phoneBattery.BatteryLevel;
+        }
+    }
+
     public Phone(string model, Battery myBattery) // Constructor (is a method), which is called when an object is created
     {
         Model = model;
