@@ -1,0 +1,4 @@
+Model, BatteryLevel
+Google Pixel, 68
+Xiaomi Redmi, 88
+Xiaomi Ultra, 77
